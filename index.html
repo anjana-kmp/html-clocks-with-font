@@ -5,59 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital clock</title>
-    <style>
-        @font-face {
-            font-family: "dg7";
-            src: url("./DSDIGI.woff") format("woff");
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            position: absolute;
-            align-content: center;
-        }
-
-        .clock-dial {
-            border: 3px dashed black;
-            background: black;
-            border-radius: 20px;
-            width: 400px;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .digits{
-            color:white;
-            font-size: 50px;
-            font-family: "dg7";
-            font-weight: bold;
-
-
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-    <script>
-        setInterval(showTime, 1000)
 
-        function showTime(){
-            let date=new Date()
-            document.querySelector(".digits").textContent=date.toLocaleTimeString()
-            console.log(date.toLocaleTimeString())
-
-        }
-    </script>
     <div class="clock-dial">
         <div class="digits"></div>
     </div>
-
+    <script src="./clock.js"></script>
+    
     
 </body>
 
